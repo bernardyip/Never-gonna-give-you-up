@@ -29,14 +29,17 @@ function annoy() {
     } catch (err) {}
 }
 
+function testAnnoy(evt) {
+	testedAnnoy = true;
+	var randVal = Math.floor((Math.random() * 100) + 1);
+	if (randVal < annoyChance) {
+		annoy();
+	} else {
+		location.reload();
+	}
+}
+
 var title = document.getElementsByTagName('title');
 for (var i = 0; i < title.length; i++) {
-    title.item(i).addEventListener("DOMSubtreeModified", function (evt) {
-        var randVal = Math.floor((Math.random() * 100) + 1);
-        if (randVal < annoyChance) {
-            annoy();
-        } else {
-            location.reload();
-        }
-    }, false);
+    title.item(i).addEventListener("DOMSubtreeModified", testAnnoy, false);
 }
