@@ -1,7 +1,7 @@
 var annoyChance = 50;
 
 function annoy() {
-    var trollVideo = ["https://www.youtube.com/embed/ZN5PoW7_kdA?start=5&autoplay=1", "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1", "https://www.youtube.com/embed/2Z4m4lnjxkY?autoplay=1", "https://www.youtube.com/embed/0XrRwruU8DE?autoplay=1", "https://www.youtube.com/embed/QH2-TGUlwu4?start=3&autoplay=1"]
+    var trollVideo = ["https://www.youtube.com/embed/ZN5PoW7_kdA?start=5&autoplay=1", "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1", "https://www.youtube.com/embed/2Z4m4lnjxkY?autoplay=1", "https://www.youtube.com/embed/0XrRwruU8DE?autoplay=1", "https://www.youtube.com/embed/QH2-TGUlwu4?start=3&autoplay=1"];
 
     $('video').attr('id', 'false');
     $('video').html("");
