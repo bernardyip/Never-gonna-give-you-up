@@ -1,28 +1,21 @@
 {
-    "manifest_version": 2,
+	"manifest_version": 2,
 
-    "name": "Never Gonna Give You Up",
-    "description": "We will never give you up",
-    "version": "1.0",
+	"name": "Never Gonna Give You Up",
+	"description": "We will never give you up",
+	"version": "1.0",
 
-    "permissions": [
+	"permissions": [
 		"activeTab",
-        "tabs",
-		"https://ajax.googleapis.com/",
-        "http://*/",
-        "https://*/"
+		"https://ajax.googleapis.com/"
 	],
 
-    "content_scripts": [
-        {
-            "matches": [
+	"content_scripts": [
+		{
+			"matches": [
 				"<all_urls>"
 			],
-            "js": ["content.js"]
+			"js": ["content.js"]
 		}
-	],
-
-    "background": {
-        "scripts": ["eventPage.js"]
-    }
+	]
 }
