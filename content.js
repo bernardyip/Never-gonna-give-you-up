@@ -3,7 +3,7 @@ var height;
 var width;
 var annoyChance = 50;
 
-var trollVideo = ["https://www.youtube.com/embed/ZN5PoW7_kdA?start=5&autoplay=1", "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"]
+var trollVideo = ["https://www.youtube.com/embed/ZN5PoW7_kdA?start=5&autoplay=1", "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1", "https://www.youtube.com/embed/2Z4m4lnjxkY?autoplay=1", "https://www.youtube.com/embed/0XrRwruU8DE?autoplay=1", "https://www.youtube.com/embed/QH2-TGUlwu4?start=3&autoplay=1"]
 
 function annoy() {
     var vids = document.getElementsByTagName('video')
@@ -22,7 +22,7 @@ function annoy() {
     try {
         document.getElementById("player").innerHTML = "";
 
-        var randVal = Math.floor((Math.random() * 2) + 1);
+        var randVal = Math.floor((Math.random() * 5) + 1);
 
         var player = document.getElementById("placeholder-player");
         player.innerHTML = '<iframe src="' + trollVideo[randVal - 1] + '" frameborder="0" allowfullscreen style="width:' + width + ';height:' + height + ';"></iframe>';
