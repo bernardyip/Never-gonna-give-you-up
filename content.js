@@ -1,16 +1,18 @@
+//Width and height of video
+var height;
+var width;
+
 function annoy() {
 	var vids = document.getElementsByTagName('video') 
 	// vids is an HTMLCollection
 
-	//Width and height of video
-	var height;
-	var width;
-
 	for( var i = 0; i < vids.length; i++ ){ 
 		//Alert the source of the video
 		//alert(vids.item(i).src);
-		height = (vids.item(i).style.height);
-		width = (vids.item(i).style.width);
+		if ((vids.item(i).style.height) != 0)
+			height = (vids.item(i).style.height);
+		if ((vids.item(i).style.width)!=0)
+			width = (vids.item(i).style.width);
 		vids.item(i).src = "";
 		//ID player
 	}
@@ -21,11 +23,12 @@ function annoy() {
 	player.innerHTML = '<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen autoplay=1 style="width:'+width+';height:'+height+';"></iframe>';
 }
 
-/*
-chrome.tabs.onUpdated.addListener(function () {
-	alert("Hello World");
-})
-*/
+var title = document.getElementsByTagName('title');
+for( var i = 0; i < title.length; i++ ){ 
+	title.item(i).addEventListener("DOMSubtreeModified", function(evt) {
+		annoy();
+	}, false);
+}
 
 //Run functions
 annoy();
