@@ -11,15 +11,17 @@ function annoy() {
 		//alert(vids.item(i).src);
 		if ((vids.item(i).style.height) != 0)
 			height = (vids.item(i).style.height);
-		if ((vids.item(i).style.width)!=0)
+		if ((vids.item(i).style.width) != 0)
 			width = (vids.item(i).style.width);
 		vids.item(i).src = "";
 	}
 
-	document.getElementById("player").innerHTML = "";
+	try {
+		document.getElementById("player").innerHTML = "";
 
-	var player = document.getElementById("placeholder-player");
-	player.innerHTML = '<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen style="width:'+width+';height:'+height+';"></iframe>';
+		var player = document.getElementById("placeholder-player");
+		player.innerHTML = '<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen style="width:'+width+';height:'+height+';"></iframe>';
+	} catch (err) {}
 }
 
 var title = document.getElementsByTagName('title');
@@ -28,6 +30,3 @@ for( var i = 0; i < title.length; i++ ){
 		annoy();
 	}, false);
 }
-
-//Run functions
-annoy();
