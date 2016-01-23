@@ -23,7 +23,6 @@ function annoy() {
         document.getElementById("player").innerHTML = "";
 
         var randVal = Math.floor((Math.random() * 2) + 1);
-        alert(randVal);
 
         var player = document.getElementById("placeholder-player");
         player.innerHTML = '<iframe src="' + trollVideo[randVal - 1] + '" frameborder="0" allowfullscreen style="width:' + width + ';height:' + height + ';"></iframe>';
