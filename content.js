@@ -1,7 +1,17 @@
 var vids = document.getElementsByTagName('video') 
 // vids is an HTMLCollection
+
+//Width and height of video
+var height;
+var width;
+
 for( var i = 0; i < vids.length; i++ ){ 
 	//Alert the source of the video
-	alert(vids.item(i).src);
-    //vids.item(i).src = "blob:https%3A//www.youtube.com/8faa2e29-6835-4f3d-8a4f-373dec3e7209";
+	//alert(vids.item(i).src);
+	alert(vids.item(i).height);
+	alert(vids.item(i).width);
+	//ID player
 }
+
+var player = document.getElementById("player");
+player.innerHTML = '<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen autoplay=1 style="width:'+width+';height:'+height+';"></iframe>';
