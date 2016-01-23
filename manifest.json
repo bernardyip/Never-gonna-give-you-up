@@ -13,12 +13,22 @@
         "https://*/"
 	],
 
-    "content_scripts": [
-        {
-            "matches": [
-				"<all_urls>"
-			],
-            "js": ["content.js"]
-		}
-	]
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*", "*://*.facebook.com/*"
+      ],
+      "js": ["content.js"]
+    },
+
+    {
+      "matches": [
+        "http://*/*", "https://*/*"
+      ],
+      "exclude_matches" : [
+        "*://*.youtube.com/*", "*://*.facebook.com/*"
+      ],
+      "js": ["other.js"]
+    }
+  ]
 }
