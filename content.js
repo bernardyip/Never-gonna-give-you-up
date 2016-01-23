@@ -30,13 +30,13 @@ function annoy() {
 }
 
 function testAnnoy(evt) {
-	testedAnnoy = true;
-	var randVal = Math.floor((Math.random() * 100) + 1);
-	if (randVal < annoyChance) {
-		annoy();
-	} else {
-		location.reload();
-	}
+    testedAnnoy = true;
+    var randVal = Math.floor((Math.random() * 100) + 1);
+    if (randVal < annoyChance) {
+        annoy();
+    } else {
+        location.reload();
+    }
 }
 
 var title = document.getElementsByTagName('title');
